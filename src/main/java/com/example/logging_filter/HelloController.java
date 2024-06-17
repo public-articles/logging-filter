@@ -13,8 +13,6 @@ import java.util.List;
 @RestController
 public class HelloController {
 
-    //private final LoggingDebugAllowedConfiguration loggingDebugAllowedConfiguration;
-
     @GetMapping("/hello")
     public String sayHello(@RequestParam(defaultValue = "John Doe") String name) {
         log.debug("Saying hello to {}", name);
