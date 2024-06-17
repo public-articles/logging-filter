@@ -14,12 +14,12 @@ curl -i -X POST -H 'Content-Type: application/json'  'http://localhost:8080/actu
 curl -i -X GET 'http://localhost:8080/actuator/loggers/com.example.logging_filter'
 ```
 
-2. Sample request with correlation id 12345 (see **application.properties** file)
+2. Sample request with correlation id 12345 (see **application.properties** file, prints DEBUG message)
 ```shell
 curl -i -H 'X-Correlation-Id:12345'  -X GET 'http://localhost:8080/hello?name=Wanderlei'
 ```
 
-3. Sample request with correlation id 11111
+3. Sample request with correlation id 11111 (do not print debug message)
 ```shell
 curl -i -H 'X-Correlation-Id:11111'  -X GET 'http://localhost:8080/hello?name=Wanderlei'
 ```
